@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="My đẹp trai">
-    <meta name="author" content="Hôih My handsome">
+    <meta name="author" content="Hoi My handsome">
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,10 +37,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./TrangChu.php">Trang chủ</a>
+          <a class="nav-link active" aria-current="page" href="./index.php">Trang chủ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./product_add.php">Chỉnh sửa</a>
+          <a class="nav-link" href="./product-add.php">Chỉnh sửa</a>
         </li>
       </ul>
     </div>

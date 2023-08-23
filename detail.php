@@ -17,7 +17,7 @@ if (session_id() === '') {
     <title></title>
 
     <!-- Nhúng file Quản lý các Liên kết CSS dùng chung cho toàn bộ trang web -->
-    <?php include_once(__DIR__ . '/../layouts/styles.php'); ?>
+    <!-- <?php include_once(__DIR__ . '/../layouts/styles.php'); ?> -->
 
     <link href="/btwed/css/css/style.css" type="text/css" rel="stylesheet" />
 
@@ -252,7 +252,7 @@ if (session_id() === '') {
 
 <body class="d-flex flex-column h-100">
     <!-- header -->
-    <?php include_once(__DIR__ . '/../layouts/partials/header.php'); ?>
+    <?php include_once(__DIR__ . '/../btwed/header.php'); ?>
     <!-- end header -->
 
     <main role="main" class="mb-2">
@@ -267,7 +267,7 @@ if (session_id() === '') {
 
         // Truy vấn database
         // 1. Include file cấu hình kết nối đến database, khởi tạo kết nối $conn
-        include_once(__DIR__ . '/../../model/conect.php');
+        include_once(__DIR__ . '/../btwed/MODEL/conect.php');
 
         /* --- 
         --- 2.Truy vấn dữ liệu Sản phẩm 
@@ -451,7 +451,7 @@ EOT;
     <!-- end footer -->
 
     <!-- Nhúng file quản lý phần SCRIPT JAVASCRIPT -->
-    <?php include_once(__DIR__ . '/../layouts/scripts.php'); ?>
+    <?php include_once(__DIR__ . '/../btwed/'); ?>
 
     <!-- Các file Javascript sử dụng riêng cho trang này, liên kết tại đây -->
     <script>

@@ -49,7 +49,7 @@
         if ($res)   
         {
             $_SESSION['username'] = $username;
-            header("location:login.php?rf=success");
+            header("Location:./Login.php?error=0");
             exit();
         }
         else 
