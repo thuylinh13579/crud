@@ -13,7 +13,7 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="../js/jquery.js"></script>
+    <script src=".."></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery-1.9.1.min.js"></script>
     <!-- Javascript Custom -->
@@ -30,7 +30,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="./TrangChu.php">Fashion MyLiShop</a>
+    <a class="navbar-brand" href="./index.php">Fashion MyLiShop</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -60,7 +60,7 @@
                         <center><h4><strong> ĐĂNG KÝ TÀI KHOẢN </strong></h4></center>
                     </div><!-- /panel heading -->
 
-                    <form action="register_back.php" method="POST" name="myForm" onsubmit="return validateForm();">
+                    <form action="register-back.php" method="POST" name="myForm" onsubmit="return validateForm();">
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 separator">

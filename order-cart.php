@@ -14,25 +14,25 @@
     <!-- CSS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/css/bootstrap.min.css">
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Custom -->
-    <script src="js/mylishop.js" type="text/javascript" charset="utf-8" async defer></script>
-    <script src="js/wow.js" type="text/javascript" charset="utf-8" async defer></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="./js/mylishop.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="./js/wow.js" type="text/javascript" charset="utf-8" async defer></script>
+    <link rel="stylesheet" type="text/css" href="./css/css/style.css">
 </head>
 <body>
     <!-- button top -->
     <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
     
-    <!-- header -->
-    <?php include 'model/header.php'; ?>
-    <!-- /header -->
+    <header>
+    <?php include '../btwed/header.php'; ?>
+    </header>
 
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="index.php">Trang chủ</a></li>
+            <li><a href="./index.php">Trang chủ</a></li>
             <li>Thông tin mua hàng</li>
         </ul><!-- /breadcrumb -->
         <div class="row">
@@ -40,8 +40,8 @@
                 <div class="info-customer">
                     <h3 style="text-align: center;"><strong> THÔNG TIN MUA HÀNG </strong></h3>
                     <p style="text-align: center;">
-                        <a href="user/register.php"> Đăng kí mua hàng</a>&nbsp;|&nbsp;
-                        <a href="user/login.php"> Đăng nhập </a>
+                        <a href="./register.php"> Đăng kí mua hàng</a>&nbsp;|&nbsp;
+                        <a href="./login.php"> Đăng nhập </a>
                     </p>
                     <!-- form mua hàng -->
                     <form name="form1" action="" method="POST">
@@ -126,9 +126,8 @@
         </div><!-- /row -->
     </div><!-- /container -->
 
-    <!-- footer -->
-    <?php include 'model/footer.php'; ?>
-    <!-- /footer -->
-
+    <footer>
+    <?php include '../btwed/footer.php'; ?>
+    </footer>
 </body>
 </html>

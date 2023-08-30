@@ -1,8 +1,14 @@
 <?php
-	
+session_start();
+error_reporting(E_ALL ^ E_DEPRECATED);
+$href = '../';
+require_once("../MODEL/conect.php");
+$prd = 0;
 ?>
 
+
 <!-- page content -->
+
 <div id="page-wrapper">
 	<div class="container-fluid">
 		<div class="row">
@@ -24,45 +30,42 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php 
-					$sql = "SELECT * FROM products ORDER BY id DESC";
-					$result = mysqli_query($conn,$sql);
-					if($result)
-					{
-						while($row = mysqli_fetch_assoc($result))
-						{
-							if($row['image'] == null|| $row['image'] == '')
-							{
+					<?php
+					$sql = "SELECT * FROM products ORDER BY id DESC ";
+					$result = mysqli_query($conn, $sql);
+					if ($result) {
+						while ($row = mysqli_fetch_assoc($result)) {
+							if ($row['image'] == null || $row['image'] == '') {
 								$thumbImage = "";
-							}else{
-								$thumbImage="../" . $row['image'];
+							} else {
+								$thumbImage = "../" . $row['image'];
 							}
 					?>
 							<tr class="odd gradex" align="center">
 								<td><?php echo $row['id']; ?></td>
-								<td><?php echo $row['name'];?></td>
-								<td><?php echo $row['category_id'];?></td>
+								<td><?php echo $row['name']; ?></td>
+								<td><?php echo $row['category_id']; ?></td>
 								<td>
-									<img src = "<?php echo $thumbImage; ?>" width="100px";>
+									<img src="<?php echo $thumbImage; ?>" width="100px" ;>
 								</td>
 								<td><?php echo $row['price']; ?></td>
 								<td><?php echo $row['saleprice']; ?></td>
 
 								<td class="center">
-								<a href="product-edit.php?idproduct=<?php echo $row['id']; ?>"><i class="fa fa pencil fa-lg" title="Chinh sua"></i>
+									<a href="product-edit.php?idproduct=<?php echo $row['id']; ?>"><i class="fa fa pencil fa-lg" title="Chỉnh sửa"></i>
 								</td>
 
 								<td class="center">
-								<a href="product-delete.php?idproduct=<?php echo $row['id']; ?>"><i class="fa fa pencil fa-lg" title="Xoa"></i>
+									<a href="product-delete.php?idproduct=<?php echo $row['id']; ?>"><i class="fa fa pencil fa-lg" title="Xóa"></i>
 								</td>
 							</tr>
-					    <?php
-					
+					<?php
+
 						}
 					}
 					?>
 
-			
+
 				</tbody>
 			</table>
 		</div><!-- /.row -->

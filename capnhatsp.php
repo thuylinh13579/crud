@@ -36,3 +36,4 @@ if (isset($_SESSION['giohangdata'])) {
 // 4. Chuyển đổi dữ liệu về định dạng JSON
 // Dữ liệu JSON, từ array PHP -> JSON 
 echo json_encode($_SESSION['giohangdata']);
+?>

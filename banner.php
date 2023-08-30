@@ -1,0 +1,1 @@
+<?php require_once('../btwed/MODEL/conect.php'); ?>

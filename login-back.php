@@ -13,14 +13,17 @@
         $rows = mysqli_num_rows($res);
         if ($rows > 0) {
             $_SESSION['username'] = $username;
-            header('Location:index.php?susses=1');
+            while($row = mysqli_fetch_assoc($res)){
+                $_SESSION['id-user'] = $row['id'];
+            }
+            header('Location:Login.php?error=0');
         }else {
             $_SESSION['error'] ="Ten dang nhap mat khau ko dung";
-            header('Location:Login.php?error=0');
+            header('Location:./index.php?susses=1');
             die("");
             exit();
         }
-
-    
-    } 
+    } else{
+        
+    }
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once('MODEL/conect.php');
+require_once('../btwed/MODEL/conect.php');
 $prd = 0;
 if (isset($_SESSION['cart'])) {
     $prd = count($_SESSION['cart']);
@@ -23,23 +23,28 @@ if (isset($_SESSION['cart'])) {
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" type="text/css" href="admin/bower_components/font-awesome/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'> -->
-
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/css/bootstrap.min.css">	
     <!-- customer js -->
-    <script src='js/wow.js'></script>
-    <script type="text/javascript" src="js/mylishop.js"></script>
+    <script src='./js/wow.js'></script>
+    <script type="text/javascript" src="./js/mylishop.js"></script>
     <!-- customer css -->
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/css/style.css">
 
 </head>
 
 <body>
     <!-- button top -->
     <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
+    
+    <Header >
+     <?php include("./header.php"); ?> 
+    </header >
 
     <!-- background -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -70,21 +75,24 @@ if (isset($_SESSION['cart'])) {
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+   
     <!-- /background -->
 
-     <!-- <Header >
-     <?php include("./btwed/header.php"); ?> 
-                </header >  -->
+    
 
     <div class="main">
         <!-- slide -->
         <!-- <?php include("model/slide.php"); ?> -->
         <!-- class="clearfix" -->
 
-        <!-- Banner -->
-        <!-- <?php include("model/banner.php"); ?> -->
-        <!-- /banner -->
+        <!-- <Banner>
+        <?php include("model/banner.php"); ?>
+        </banner> -->
 
+
+
+
+        
         <!-- Content -->
         <div class="container">
             <div class="row">
@@ -207,7 +215,7 @@ if (isset($_SESSION['cart'])) {
                                                         <label style="color: red;">&hearts;</label> Mua hàng <label style="color: red;">&hearts;</label>
                                                     </button>
                                                 </a>
-                                                <a href="detail.php?id=<?php echo $kq['id'] ?>">
+                                                <a href="detail.php?id=<?php echo $kq['id']; ?>">
                                                     <button type="button" class="btn btn-primary">
                                                         <label style="color: red;">&hearts;</label> Chi Tiết <label style="color: red;">&hearts;</label>
                                                     </button>
@@ -236,11 +244,11 @@ if (isset($_SESSION['cart'])) {
     </div> -->
     <!-- /partner -->
 
-    <!-- footer -->
-    <!-- <div class="container">
-        <?php include("model/footer.php"); ?>
-    </div> -->
-    <!-- /footer -->
+    <footer>
+     <div class="container">
+        <?php include("../btwed/footer.php"); ?>
+    </div> 
+    </footer>
 
     <style>
         .banner {
@@ -254,7 +262,7 @@ if (isset($_SESSION['cart'])) {
         new WOW().init();
     </script>
     <script type="text/javascript" src="https://forum.vietdesigner.net/data/codes/snowstorm.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+ 
 </body>
 
 </html>

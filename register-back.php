@@ -1,8 +1,9 @@
+<meta charset="utf-8">
 <?php
-    session_start();
-    error_reporting(E_ALL ^ E_DEPRECATED);
-    require_once '../btwed/MODEL/conect.php';
-
+   session_start();
+   error_reporting(E_ALL ^ E_DEPRECATED);
+   require_once('../btwed/MODEL/conect.php'); 
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['submit']))
     {
@@ -44,7 +45,7 @@
 
 
         $sql = "INSERT INTO users (fullname, username ,password, email, phone, address,role)
-                VALUES ('$fullname', '$username','$password', '$email', $phone, '$address', 1)";
+                VALUES ('$fullname', '$username',md5('$password'), '$email', $phone, '$address', 1)";
         $res = mysqli_query($conn,$sql);
         if ($res)   
         {

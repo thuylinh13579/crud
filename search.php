@@ -15,8 +15,8 @@
 	}													
 	else {													
 	echo $message;													
-	}													
-														
+	}		
+
 	$resultSearch = mysqli_query($conn,$sql);													
 	if($resultSearch)													
 	{													
@@ -25,7 +25,7 @@
 	else {													
 	$totalnumber = 0;													
 	}													
-														
+												
 	?>													
 														
 	<!DOCTYPE html>													
@@ -41,20 +41,20 @@
 	<meta name="author" content="Hôih My" />													
 	<meta name="author" content="Y Blir" />													
 	<link rel="icon" type="image/png" href="images/logohong.png">													
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->													
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">													 -->
 	<link rel="stylesheet" type="text/css" href="admin/bower_components/font-awesome/css/font-awesome.min.css">													
-	<link rel="stylesheet" href="css/bootstrap.min.css">													
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>													
-	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script> -->													
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>													
-	<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'> -->													
+	<link rel="stylesheet" href="./css/css/bootstrap.min.css">													
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>													 -->
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>													 -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>													 -->
+	<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>													 -->
 														
 	<!-- customer js -->													
-	<script src='js/wow.js'></script>													
-	<script type="text/javascript" src="js/mylishop.js"></script>													
+	<script src='./js/wow.js'></script>													
+	<script type="text/javascript" src="./js/mylishop.js"></script>													
 	<!-- customer css -->													
-	<link rel="stylesheet" type="text/css" href="css/animate.css">													
-	<link rel="stylesheet" type="text/css" href="css/style.css">													
+	<link rel="stylesheet" type="text/css" href="./css/css/animate.css">													
+	<link rel="stylesheet" type="text/css" href="./css/css/style.css">													
 														
 	</head>													
 	<body>													
@@ -74,9 +74,9 @@
 	</div>													
 	</div><!-- /background -->													
 														
-	<!-- Header -->													
-	<?php include("./btwed/header.php"); ?>													
-	<!-- /header -->													
+	<Header>													
+	<?php include("../btwed/header.php"); ?>													
+	</header>													
 														
 	<div class="container">													
 	<ul class="breadcrumb">													
@@ -88,7 +88,9 @@
 	<div class="row">													
 	<div class="col-md-12 col-sm-12 col-xs-12">													
 	<div class="product-main">													
-	<div class="title-product-main">													
+	<div class="title-product-main">	
+		
+	
 	<h3 class="section-title"> Kết Quả Tìm Kiếm </h3>													
 	<p style="color: black; margin-left: 10px;">Có <?php echo $totalnumber; ?> sản phẩm được tìm thấy</p>													
 	</div>													
@@ -146,7 +148,7 @@
 														
 	<!-- footer -->													
 	<div class="container">													
-	<?php include("model/footer.php"); ?>													
+	<?php include("../btwed/footer.php"); ?>													
 	</div>													
 	<!-- /footer -->													
 														

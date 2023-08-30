@@ -2,7 +2,7 @@
 	<?php
 	    session_start();
 	    error_reporting(E_ALL ^ E_DEPRECATED);
-	    require_once("/xampp/htdocs/vdPHP/btwed/MODEL/conect.php");
+	    require_once("../btwed/MODEL/conect.php");
 	
 	    // Hủy giỏ hàng:
 	    if (isset($_GET["idCancel"]))
@@ -113,7 +113,7 @@
 	            $mPass = 'hoihmy039745020027121998';       //mat khau email cua ban
 	            $nTo = $name; //Ten nguoi nhan
 	            $mTo = $email;   //dia chi nhan mail
-	            $mail = new PHPMailer();
+	            // $mail = new PHPMailer();
 	            $title = 'THÔNG TIN MUA HÀNG TỪ MYLISHOP';   //Tieu de gui mail
 	            $body = 'NỘI DUNG ĐƠN HÀNG:' . "<br/>"."<br/>".
 	            $body .= "Tên khách hàng: " . $name . "\n";

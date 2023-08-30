@@ -89,11 +89,12 @@
         $result = mysqli_query($conn,$sql);
         if($result)
         {
-            header("location:product-add.php?addps=success");
+            header("location:./admin/product-list.php?addps=success");
             exit();
+            echo "bạn đã thêm sản phẩm thành công";
         }
         else {
-            header("location:product-add.php?addpf=fail");
+            header("location:./admin/product-list.php?addpf=fail");
             exit();
         }
     }
