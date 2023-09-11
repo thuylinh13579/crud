@@ -52,11 +52,12 @@ $prd = 0;
 								<td><?php echo $row['saleprice']; ?></td>
 
 								<td class="center">
-									<a href="product-edit.php?idproduct=<?php echo $row['id']; ?>"><i class="fa fa pencil fa-lg" title="Chỉnh sửa"></i>
+									<a href="product-edit.php?idproduct=<?php echo $row['id']; ?>"><i class="fa fa pencil fa-lg" title="Chỉnh sửa">chỉnh sửa</i>
 								</td>
 
 								<td class="center">
-									<a href="product-delete.php?idproduct=<?php echo $row['id']; ?>"><i class="fa fa pencil fa-lg" title="Xóa"></i>
+									<a href="product-delete.php?idproduct=<?php echo $row['id']; ?>"><i class="fa fa pencil fa-lg" title="Xóa">Xóa </i>
+								
 								</td>
 							</tr>
 					<?php
